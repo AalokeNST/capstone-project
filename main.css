@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syne:wght@400..800&display=swap");
+
+* {
+  font-family: "Familjen Grotesk", sans-serif;
+}
+
+body {
+  background: #ecf6fe;
+  color: #381664;
+  margin: 0;
+}
+
+.navbar {
+  padding: 16px 48px;
+  border-bottom: 1px solid #440a8f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h1 {
+  font-size: 42px;
+  font-family: "Syne", sans-serif;
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  gap: 32px;
+}
+
+.navbar ul li {
+  font-family: "Syne", sans-serif;
+  font-size: 28px;
+}
+
+header {
+  display: flex;
+  padding: 144px 48px 0px 48px;
+  flex-direction: column;
+  background: linear-gradient(0deg, #cecce9 0%, rgba(68, 10, 143, 0) 100%);
+  border-bottom: 1px solid #440a8f;
+  margin-bottom: 48px;
+}
+
+header img {
+  width: 100%;
+  margin-top: -40px;
+  margin-bottom: -6px;
+}
+
+header h1 {
+  font-size: 120px;
+  text-align: center;
+  font-family: "Syne", sans-serif;
+  margin: 0px;
+}
+
+section {
+  padding: 48px 48px;
+}
+
+#projects {
+  width: auto;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+}
+
+#projects div {
+  grid-column: span 1 / span 1;
+  grid-row: span 1 / span 1;
+  margin-bottom: 48px;
+}
+
+#projects div img {
+  width: 100%;
+  border: 1px solid #440a8f;
+  margin-bottom: 8px;
+}
+
+#projects div h4 {
+  font-size: 20px;
+  margin: 0;
+  font-weight: normal;
+}
+
+#projects div p {
+  font-size: 17px;
+  margin: 0;
+}
+
+#about-me {
+  display: grid;
+  gap: 48px;
+  grid-template-columns: 1fr 1fr;
+}
+
+#about-me h2 {
+  font-size: 28px;
+  line-height: 32px;
+  grid: 1 span / 1 span;
+  font-family: "Syne", sans-serif;
+}
+
+#about-me p {
+  font-size: 17px;
+  line-height: 28px;
+}
+
+#about-me-2 h1 {
+  font-size: 64px;
+  line-height: 68px;
+  margin-bottom: 96px;
+  font-family: "Syne";
+}
+
+#about-me-2 img {
+  width: 100%;
+}
+
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 200px 48px;
+  text-align: center;
+}
+
+#contact h4 {
+  font-size: 28px;
+  line-height: 32px;
+  font-family: "Syne", sans-serif;
+  margin: 0px;
+}
+
+#contact p {
+  font-size: 15px;
+  margin: 0;
+  margin-bottom: 32px;
+}
+
+#contact form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact form input {
+  display: inline-block;
+}
+
+#contact button {
+  font-family: "Space Mono", monospace;
+  color: #fff;
+  background-color: #440a8f;
+  width: 100%;
+  border-radius: 8px;
+  padding: 16px 8px;
+  border: none;
+  margin-bottom: 32px;
+}
+
+#contact input {
+  font-size: 20px;
+  padding: 8px 16px;
+  border: 1px solid #440a8f;
+  border-radius: 8px;
+  color: #440a8f;
+  width: 56px;
+  height: 64px;
+  text-align: center;
+}
+
+#contact a {
+  margin-top: 32px;
+  font-size: 15px;
+  line-height: 20px;
+  font-family: "Space Mono", monospace;
+  color: #440a8f;
+}
+
+footer {
+  display: flex;
+  padding: 48px;
+  justify-content: space-between;
+  align-items: center;
+  color: #440a8f;
+}
+
+footer p {
+  font-size: 28px;
+  font-family: "Syne", sans-serif;
+}
+
+footer button {
+  font-size: 20px;
+  padding: 12px 24px;
+  border: 1px solid #440a8f;
+  border-radius: 8px;
+  background: none;
+  font-family: "Space Mono", monospace;
+  color: #440a8f;
+}
