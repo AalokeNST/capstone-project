@@ -3,14 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>MyPortfolio</title>
     <!--Import CSS-->
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <nav class="navbar">
-      <h1>MyPortfolio</h1>
-      <ul>
+    <nav class="navbar slideDown">
+      <div class="navbar-mobile">
+        <h1>MyPortfolio</h1>
+        <button id="menu" onclick="toggleButton()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 256 256"
+          >
+            <path
+              d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <ul class="menu-items hidden" id="navbar">
         <li>Home</li>
         <li>Projects</li>
         <li>About</li>
@@ -18,8 +32,8 @@
       </ul>
     </nav>
     <header>
-      <h1>Discover My<br />Creative World</h1>
-      <img src="img/cover-image.png" />
+      <h1 class="slideDown">Discover My<br />Creative World</h1>
+      <img src="img/cover-image.png" class="slideUp" />
     </header>
     <section class="projects" id="projects">
       <div>
@@ -79,13 +93,13 @@
       </p>
     </section>
     <section id="about-me-2">
-      <h1>
+      <h1 class="slideRight">
         Crafting visually stunning<br />
         and user-friendly designs.<br />
         Let's create something<br />
         amazing together.
       </h1>
-      <img src="img/about-2.png" />
+      <img src="img/about-2.png" class="slideUp" />
     </section>
     <section id="contact">
       <div>
@@ -94,11 +108,11 @@
           Feel free to reach out for collaborations or just a friendly chat.
         </p>
         <form>
-          <input placeholder="0" value="0" max="9" min="0" />
-          <input placeholder="0" value="0" max="9" min="0" />
-          <input placeholder="0" value="0" max="9" min="0" />
-          <input placeholder="0" value="0" max="9" min="0" />
-          <input placeholder="0" value="0" max="9" min="0" />
+          <input placeholder="0" max="9" min="0" />
+          <input placeholder="0" max="9" min="0" />
+          <input placeholder="0" max="9" min="0" />
+          <input placeholder="0" max="9" min="0" />
+          <input placeholder="0" max="9" min="0" />
         </form>
         <button>Submit</button>
         <a>Skip</a>
@@ -108,5 +122,7 @@
       <p>&copy; 2023 MyPortfolio</p>
       <button>Follow me</button>
     </footer>
+
+    <script src="main.js"></script>
   </body>
 </html>

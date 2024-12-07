@@ -8,6 +8,7 @@ body {
   background: #ecf6fe;
   color: #381664;
   margin: 0;
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -21,6 +22,7 @@ body {
 .navbar h1 {
   font-size: 42px;
   font-family: "Syne", sans-serif;
+  margin: 0;
 }
 
 .navbar ul {
@@ -32,6 +34,12 @@ body {
 .navbar ul li {
   font-family: "Syne", sans-serif;
   font-size: 28px;
+  transition: 0.4s ease;
+}
+
+.navbar ul li:hover {
+  text-decoration: underline;
+  transition: 0.4s ease;
 }
 
 header {
@@ -45,15 +53,16 @@ header {
 
 header img {
   width: 100%;
-  margin-top: -40px;
+  margin-top: -30px;
   margin-bottom: -6px;
 }
 
 header h1 {
-  font-size: 120px;
+  font-size: 7.5rem;
   text-align: center;
   font-family: "Syne", sans-serif;
   margin: 0px;
+  line-height: 120px;
 }
 
 section {
@@ -72,6 +81,12 @@ section {
   grid-column: span 1 / span 1;
   grid-row: span 1 / span 1;
   margin-bottom: 48px;
+  transition: 0.4s ease;
+}
+
+#projects div:hover {
+  transform: scale(1.05);
+  transition: 0.4s ease;
 }
 
 #projects div img {
@@ -162,6 +177,7 @@ section {
   padding: 16px 8px;
   border: none;
   margin-bottom: 32px;
+  font-size: 15px;
 }
 
 #contact input {
@@ -181,6 +197,10 @@ section {
   line-height: 20px;
   font-family: "Space Mono", monospace;
   color: #440a8f;
+}
+
+#contact a:hover {
+  text-decoration: underline;
 }
 
 footer {
@@ -204,4 +224,144 @@ footer button {
   background: none;
   font-family: "Space Mono", monospace;
   color: #440a8f;
+}
+
+footer button:hover {
+  background: #440a8f;
+  color: #fff;
+  transition: 0.4s ease;
+}
+
+.slideUp {
+  animation: 1.5s slideUp ease;
+}
+
+.slideDown {
+  animation: 1.5s slideDown ease;
+}
+
+.slideRight {
+  animation: 1.5s slideRight ease;
+}
+
+/* Animations */
+@keyframes slideUp {
+  0% {
+    opacity: 0%;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0%;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    opacity: 0%;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateX(0);
+  }
+}
+
+@keyframes navOpen {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.navbar-mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#menu {
+  fill: #440a8f;
+  background: none;
+  border: none;
+}
+
+/* Mobile Responsiveness */
+
+@media only screen and (min-width: 768px) {
+  #menu {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hidden {
+    display: none !important;
+  }
+  .navbar {
+    display: block;
+  }
+
+  header h1 {
+    font-size: 5.5rem;
+    line-height: 5.5rem;
+  }
+
+  .navbar ul {
+    display: block;
+    animation: 0.5s navOpen ease;
+    transform-origin: top;
+  }
+
+  #nav-desktop {
+    display: none;
+  }
+
+  #projects {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #projects {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  header {
+    padding-top: 48px;
+  }
+  header h1 {
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+  }
+
+  #about-me {
+    display: block;
+  }
+
+  #about-me-2 h1 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
+  #contact {
+    padding: 100px 20px;
+  }
+  #contact input {
+    width: 20px;
+  }
 }
